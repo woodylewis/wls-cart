@@ -21,10 +21,14 @@ angular.module('stride-test.mainCtrl', [
 	inventoryService.fetchInventory()
 	.then(function (data) {
 		$scope.chocolates = data;
-		console.log($scope.chocolates);
+		//console.log($scope.chocolates);
     	$state.go('main');
 	}),
 	function (error) {
 		console.log('error on fetchInventory - ', error);
+	};
+
+	$scope.showCart = function() {
+		alert('CART');
 	};
 }]);

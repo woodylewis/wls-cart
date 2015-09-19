@@ -1,6 +1,12 @@
 @bp-small-mobile : 375px;
 @bp-larger-than-small-mobile : 400px;
 @black: #000000;
+@secondary-color: lighten(@dark-grey, 13.5%);
+@dark-grey: #333;
+@border-color: #bbb;
+@primary-color: #33c3f0;
+@link-color: #1eaedb;
+@global-radius: 4px;
 
 .home-link, .wls-click, .wls-row, .nav a { cursor: pointer; }
 
@@ -10,10 +16,80 @@ header {
     font-weight: 700;
     text-align:center;
     color: #000000;
-    margin-top: .2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border:1px dotted grey;
 }
 
 body {
-    text-align: center;
     color: @black;
+}
+
+.inventory {
+    width:90%;
+    text-align:center;
+    .item {
+        width: 70%;
+        height: 8em;
+        margin-top:1em;
+        border:1px dotted blue;
+    }
+}
+
+.button,
+button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: @secondary-color;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: @global-radius;
+  border: 1px solid @border-color;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button.button-primary,
+button.button-primary {
+  color: #fff;
+  background-color: @primary-color;
+  border-color: @primary-color;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover {
+  color: #fff;
+  background-color: @link-color;
+  border-color: @link-color;
+}
+
+.button.button-primary:focus,
+button.button-primary:focus {
+  color: #fff;
+  background-color: @link-color;
+  border-color: @link-color;
+}
+
+input {
+  &[type="button"].button-primary {
+    color: #fff;
+    background-color: @primary-color;
+    border-color: @primary-color;
+  }
+}
+
+input {
+  &[type="button"].button-primary:hover {
+    color: #fff;
+    background-color: @link-color;
+    border-color: @link-color;
+  }
 }

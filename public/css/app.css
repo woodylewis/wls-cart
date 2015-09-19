@@ -10,13 +10,68 @@ header {
   font-weight: 700;
   text-align: center;
   color: #000000;
-  margin-top: .2em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: 1px dotted grey;
 }
 body {
-  text-align: center;
   color: #000000;
 }
-img {
-  max-width: 100%;
-  height: auto;
+.inventory {
+  width: 90%;
+  text-align: center;
+}
+.inventory .item {
+  width: 70%;
+  height: 8em;
+  margin-top: 1em;
+  border: 1px dotted blue;
+}
+.button,
+button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbbbbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button.button-primary,
+button.button-primary {
+  color: #fff;
+  background-color: #33c3f0;
+  border-color: #33c3f0;
+}
+.button.button-primary:hover,
+button.button-primary:hover {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+.button.button-primary:focus,
+button.button-primary:focus {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
+}
+input[type="button"].button-primary {
+  color: #fff;
+  background-color: #33c3f0;
+  border-color: #33c3f0;
+}
+input[type="button"].button-primary:hover {
+  color: #fff;
+  background-color: #1eaedb;
+  border-color: #1eaedb;
 }

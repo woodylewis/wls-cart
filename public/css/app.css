@@ -1,0 +1,29 @@
+.home-link,
+.wls-click,
+.wls-row,
+.nav a {
+  cursor: pointer;
+}
+header {
+  font-family: 'Cinzel' serif;
+  font-size: 200%;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  margin-top: .2em;
+}
+header a:link,
+header a:hover,
+header a:visited,
+header a:active {
+  color: #000000;
+  text-decoration: none;
+}
+body {
+  text-align: center;
+  color: #000000;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

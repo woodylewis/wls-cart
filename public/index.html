@@ -29,8 +29,15 @@
             <div ng-bind="chocolate.description"></div>
         </div>
       </div>
-      <modal-cart show='showCart' width='750px' height='60%'>
+      <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
+                  total= 'total' 
+                  width='80%' height='80%'>
         <p>Your Cart<p>
+        Milk <div ng-bind='milk'></div>
+        Dark <div ng-bind='dark'></div>
+        White <div ng-bind='white'></div>
+        Sugar Free<div ng-bind='sugarfree'></div>
+        Total <div ng-bind='total'></div>
       </modal-cart>
     </div>
   	

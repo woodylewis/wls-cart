@@ -5,7 +5,8 @@ angular.module('stride-test.modalCart', [])
 	return {
 		restrict: 'E',
 		scope: {
-			show: '='
+			show: '=',
+			total: '='
 		},
 		replace: true,
 		transclude: true,
@@ -19,6 +20,10 @@ angular.module('stride-test.modalCart', [])
 			}
 			scope.hideModal = function() {
 				scope.show = false;
+			};
+
+			scope.clearCart = function() {
+				scope.total = 0;
 			};
 		}, 
 		templateUrl: 'templates/modalCart.html'

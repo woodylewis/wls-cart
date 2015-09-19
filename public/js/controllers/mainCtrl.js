@@ -21,7 +21,6 @@ angular.module('stride-test.mainCtrl', [
 	inventoryService.fetchInventory()
 	.then(function (data) {
 		$scope.chocolates = data;
-		//console.log($scope.chocolates);
     	$state.go('main');
 	}),
 	function (error) {

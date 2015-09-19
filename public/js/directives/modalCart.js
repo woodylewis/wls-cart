@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('stride-test.modalCart', [])
-.directive('modalDialog', function () {
+.directive('modalCart', function () {
 	return {
 		restrict: 'E',
 		scope: {

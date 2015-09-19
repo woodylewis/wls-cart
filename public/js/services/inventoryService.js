@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('stride-test.inventoryService', [])
-/* SERVICE TO WRAP HTTP REQUESTS */
 .factory('inventoryService' , ['$q', '$http', 
 	function($q, $http) {
 		var invetoryUrl = 'http://localhost:3000/data/inventory.json';

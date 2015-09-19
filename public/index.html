@@ -5,6 +5,8 @@
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="stride-test" class="no-js"> <!--<![endif]-->
 <html>
   <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sugar Sweet Chocolate Treats</title>
@@ -16,14 +18,25 @@
     <header>
       Sugar Sweet Chocolate Treats
     </header>
-  	<div ng-controller="mainCtrl">
-      <button data-ng-click="showCart()" class="button-primary">View Cart</button>
-    	<div ui-view="state"></div>
-  	</div>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <div ng-controller='mainCtrl'>
+      <button data-ng-click='toggleCart()' class="button-primary">View Cart</button>
+      <div class="inventory">
+        <div class="item" ng-repeat="chocolate in chocolates.chocolates">
+            <div ng-bind="chocolate.type"></div>
+            <br>
+            <div ng-bind="chocolate.price"></div>
+            <br>
+            <div ng-bind="chocolate.description"></div>
+        </div>
+      </div>
+      <modal-dialog show='showCart' width='750px' height='60%'>
+        <p>HERE<p>
+      </modal-dialog>
+    </div>
+  	
   	<script src="js/app.js"></script>
   	<script src="js/controllers/mainCtrl.js"></script>
     <script src="js/services/inventoryService.js"></script>
+    <script src="js/directives/modalCart.js"></script>
   </body>
 </html>

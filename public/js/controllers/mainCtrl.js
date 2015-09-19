@@ -1,33 +1,20 @@
 'use strict';
 
 angular.module('stride-test.mainCtrl', [
-	'stride-test.inventoryService'
+	'stride-test.inventoryService',
+	'stride-test.modalCart'
 ])
-.config(['$stateProvider', '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider ) {
-
-	$urlRouterProvider
-	.otherwise('/index');
-	
-	$stateProvider
-    .state('main', {
-      url: "/main",
-      views: {
-        "state" : { templateUrl: "partials/main.html" }
-      }
-    });
-}])
-.controller('mainCtrl', ['$scope', '$state', 'inventoryService', function($scope, $state, inventoryService) {
+.controller('mainCtrl', ['$scope', 'inventoryService', function($scope, inventoryService) {
+	$scope.showCart = false;
 	inventoryService.fetchInventory()
 	.then(function (data) {
 		$scope.chocolates = data;
-    	$state.go('main');
 	}),
 	function (error) {
 		console.log('error on fetchInventory - ', error);
 	};
 
-	$scope.showCart = function() {
-		alert('CART');
+	$scope.toggleCart = function() {
+		$scope.showCart = !$scope.showCart;
 	};
 }]);

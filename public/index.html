@@ -33,12 +33,22 @@
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
                   total= 'total' clear-items='clearCart()' width='80%' height='80%'>
-        <p>Your Cart<p>
-        Milk <div ng-bind='milk'></div>
-        Dark <div ng-bind='dark'></div>
-        White <div ng-bind='white'></div>
-        Sugar Free<div ng-bind='sugarfree'></div>
-        Total <div ng-bind='total'></div>
+          Your Cart<div ng-show="(total == 0)">Is Empty</div>
+          <div ng-show="(milk > 0)" class="modal-row">
+            Milk<div ng-bind='milk'></div>
+          </div>
+          <div ng-show="(dark > 0)" class="modal-row">
+            Dark <div ng-bind='dark'></div>
+          </div>
+          <div ng-show="(white > 0)" class="modal-row">
+            White <div ng-bind='white'></div>
+          </div>
+          <div ng-show="(sugarfree > 0)" class="modal-row">
+            Sugar Free<div ng-bind='sugarfree'></div>
+          </div>
+          <div ng-show="(total > 0)" class="modal-row">
+            Total <div ng-bind='total'></div>
+          </div>
       </modal-cart>
     </div>
   	

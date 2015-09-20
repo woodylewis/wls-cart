@@ -38,15 +38,19 @@ angular.module('stride-test.mainCtrl', [
 		switch (id) {
 			case 1 :
 				$scope.milk++;
+				$scope.total+= $scope.chocolates.chocolates[0].price;
 			break;
 			case 2 :
 				$scope.dark++;
+				$scope.total+= $scope.chocolates.chocolates[1].price;
 			break;
 			case 3 :
 				$scope.white++;
+				$scope.total+= $scope.chocolates.chocolates[2].price;
 			break;
 			case 4 :
 				$scope.sugarfree++;
+				$scope.total+= $scope.chocolates.chocolates[3].price;
 			break;
 			default:
 				console.log('no id for item');

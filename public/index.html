@@ -27,12 +27,12 @@
         <div class="item" ng-repeat="chocolate in chocolates.chocolates">
             <div class="type" data-ng-bind="chocolate.type"></div>
             <div class="price" data-ng-bind="('$' + (chocolate.price | number:2))"></div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button data-ng-click="addItem(chocolate.id)" class="add-to-cart">Add to Cart</button>
             <div class="description" data-ng-bind="chocolate.description"></div>
         </div>
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
-                  total= 'total' width='80%' height='80%'>
+                  total= 'total' clear-items='clearCart()' width='80%' height='80%'>
         <p>Your Cart<p>
         Milk <div ng-bind='milk'></div>
         Dark <div ng-bind='dark'></div>

@@ -3,10 +3,11 @@
 angular.module('stride-test.modalCart', [])
 .directive('modalCart', function () {
 	return {
-		restrict: 'E',
+		restrict: 'EA',
 		scope: {
 			show: '=',
-			total: '='
+			total: '=',
+			clearItems: '&'
 		},
 		replace: true,
 		transclude: true,
@@ -23,8 +24,11 @@ angular.module('stride-test.modalCart', [])
 			};
 
 			scope.clearCart = function() {
-				scope.total = 0;
-			};
+				//--Call the controller's clearCart function --
+				//--that is mapped to the clear-items in the isolate scope
+				scope.clearItems();
+				scope.show = false;
+			}
 		}, 
 		templateUrl: 'templates/modalCart.html'
 	};

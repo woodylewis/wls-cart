@@ -66,16 +66,6 @@ body {
   float: right;
   display: inline-block;
 }
-input[type="button"].button-primary {
-  color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0;
-}
-input[type="button"].button-primary:hover {
-  color: #fff;
-  background-color: #1eaedb;
-  border-color: #1eaedb;
-}
 .ng-modal-overlay {
   position: absolute;
   z-index: 9999;

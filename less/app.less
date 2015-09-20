@@ -8,17 +8,17 @@
 @link-color: #1eaedb;
 @global-radius: 4px;
 
-.home-link, .wls-click, .wls-row, .nav a { cursor: pointer; }
-
 header {
+    width:100%;
+    height:1.5em;
     font-family: 'Cinzel' serif; 
     font-size: 200%; 
     font-weight: 700;
     text-align:center;
     color: #000000;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    border:1px dotted grey;
+    margin:.5em 0 .5em 0;
+    padding:.5em;
+    border-bottom:1px dotted grey;
 }
 
 body {
@@ -26,56 +26,55 @@ body {
 }
 
 .inventory {
-    width:90%;
-    text-align:center;
+    width:80%;
+    margin:auto;
+    padding:0 1em 0 1em;
+    .view-cart {
+      height:4em; 
+      margin:.5em 1em 0 1em;
+      float:right;
+      display:inline;
+      .view-button {
+        display:block;
+      }
+      .num-items, 
+      .num-items-label {
+        display:inline;
+        margin-top:.5em;
+      }
+      .num-items {
+        float:left;
+        text-align:right;
+      }
+      .num-items-label {
+        float:right;
+      }
+    }
     .item {
-        width: 70%;
+        width:75%;
         height: 8em;
         margin-top:1em;
-        border:1px dotted blue;
+        border:1px dotted grey;
+        .type, .price, .description {
+          float:left;
+          padding:.5em;
+        }
+        .type,
+        .price {
+          width:20%;
+          display:inline;
+          text-transform:capitalize;
+        }
+        .description {
+          width:70%;
+          display:block;
+        }
+        .add-to-cart {
+          margin:1em;
+          float:right;
+          display:inline-block;
+        }
     }
-}
-
-.button,
-button {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: @secondary-color;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: @global-radius;
-  border: 1px solid @border-color;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.button.button-primary,
-button.button-primary {
-  color: #fff;
-  background-color: @primary-color;
-  border-color: @primary-color;
-}
-
-.button.button-primary:hover,
-button.button-primary:hover {
-  color: #fff;
-  background-color: @link-color;
-  border-color: @link-color;
-}
-
-.button.button-primary:focus,
-button.button-primary:focus {
-  color: #fff;
-  background-color: @link-color;
-  border-color: @link-color;
 }
 
 input {

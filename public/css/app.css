@@ -1,69 +1,70 @@
-.home-link,
-.wls-click,
-.wls-row,
-.nav a {
-  cursor: pointer;
-}
 header {
+  width: 100%;
+  height: 1.5em;
   font-family: 'Cinzel' serif;
   font-size: 200%;
   font-weight: 700;
   text-align: center;
   color: #000000;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  border: 1px dotted grey;
+  margin: .5em 0 .5em 0;
+  padding: .5em;
+  border-bottom: 1px dotted grey;
 }
 body {
   color: #000000;
 }
 .inventory {
-  width: 90%;
-  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 0 1em 0 1em;
+}
+.inventory .view-cart {
+  height: 4em;
+  margin: .5em 1em 0 1em;
+  float: right;
+  display: inline;
+}
+.inventory .view-cart .view-button {
+  display: block;
+}
+.inventory .view-cart .num-items,
+.inventory .view-cart .num-items-label {
+  display: inline;
+  margin-top: .5em;
+}
+.inventory .view-cart .num-items {
+  float: left;
+  text-align: right;
+}
+.inventory .view-cart .num-items-label {
+  float: right;
 }
 .inventory .item {
-  width: 70%;
+  width: 75%;
   height: 8em;
   margin-top: 1em;
-  border: 1px dotted blue;
+  border: 1px dotted grey;
 }
-.button,
-button {
+.inventory .item .type,
+.inventory .item .price,
+.inventory .item .description {
+  float: left;
+  padding: .5em;
+}
+.inventory .item .type,
+.inventory .item .price {
+  width: 20%;
+  display: inline;
+  text-transform: capitalize;
+}
+.inventory .item .description {
+  width: 70%;
+  display: block;
+}
+.inventory .item .add-to-cart {
+  margin: 1em;
+  float: right;
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbbbbb;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-.button.button-primary,
-button.button-primary {
-  color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0;
-}
-.button.button-primary:hover,
-button.button-primary:hover {
-  color: #fff;
-  background-color: #1eaedb;
-  border-color: #1eaedb;
-}
-.button.button-primary:focus,
-button.button-primary:focus {
-  color: #fff;
-  background-color: #1eaedb;
-  border-color: #1eaedb;
 }
 input[type="button"].button-primary {
   color: #fff;

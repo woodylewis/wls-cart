@@ -19,19 +19,20 @@
       Sugar Sweet Chocolate Treats
     </header>
     <div ng-controller='mainCtrl'>
-      <button data-ng-click='toggleCart()' class="button-primary">View Cart</button>
       <div class="inventory">
+        <div class="view-cart">
+          <button class="view-button" data-ng-click='toggleCart()'>View Cart</button>
+          <div class="num-items" ng-bind="numItems"></div><div class="num-items-label">items</div>
+        </div>
         <div class="item" ng-repeat="chocolate in chocolates.chocolates">
-            <div ng-bind="chocolate.type"></div>
-            <br>
-            <div ng-bind="chocolate.price"></div>
-            <br>
-            <div ng-bind="chocolate.description"></div>
+            <div class="type" data-ng-bind="chocolate.type"></div>
+            <div class="price" data-ng-bind="('$' + (chocolate.price | number:2))"></div>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="description" data-ng-bind="chocolate.description"></div>
         </div>
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
-                  total= 'total' 
-                  width='80%' height='80%'>
+                  total= 'total' width='80%' height='80%'>
         <p>Your Cart<p>
         Milk <div ng-bind='milk'></div>
         Dark <div ng-bind='dark'></div>

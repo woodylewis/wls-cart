@@ -170,5 +170,3 @@ If you're running the non-default setup, be sure to tell us how to start your pr
 1. `npm run test` - Runs [Jasmine](http://jasmine.github.io/2.3/introduction.html) units tests in [Karma](https://karma-runner.github.io/0.12), through [PhantomJS](http://phantomjs.org) (This is installed for you by `npm`).
   - Runs every file ending in `-spec.js` inside `test/`
   - If you'd like to configure it, see `karma.config.js`
-
-## ADDITIONAL STUFF

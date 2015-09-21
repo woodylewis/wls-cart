@@ -18,7 +18,7 @@
     <header>
       Sugar Sweet Chocolate Treats
     </header>
-    <div ng-controller='mainCtrl'>
+    <div ng-cloak ng-controller='mainCtrl'>
       <div class="inventory">
         <div class="view-cart">
           <button class="view-button" data-ng-click='toggleCart()'>View Cart</button>
@@ -33,7 +33,7 @@
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
                   total= 'total' clear-items='clearCart()' width='80%' height='80%'>
-          Your Cart<div ng-show="(total == 0)">Is Empty</div>
+          Your Cart<div ng-show="(total == 0)" style="display:inline;">&nbsp;Is Empty</div>
           <div ng-show="(milk > 0)" class="modal-row">
             Milk<div ng-bind='milk'></div>
           </div>

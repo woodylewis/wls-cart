@@ -100,13 +100,33 @@ body {
       -moz-transform: translate(-50%, -50%);
       background-color: #fff;
       box-shadow:4px 4px 80px #000;  
+      .modal-dialog-inner,
+      .modal-dialog-button {
+      }
+      .modal-dialog-inner {
+        height:16em;
+        padding:4em;
+        display:block;
+        border:1px dotted blue;
+      }
+      .modal-dialog-button {
+        margin:2em;
+      }
+      .modal-dialog-row {
+          border:1px dotted grey;
+          width:8em;
+          height:2em;
+          margin:1em;
+          .modal-dialog-pull-left,
+          .modal-dialog-pull-right {
+            display:inline;
+          }
+          .modal-dialog-pull-left {
+            float:left;
+          }
+          .modal-dialog-pull-right {
+            float:right;
+          }
+      }
   }
-  .modal-row {
-    display:block;
-    .modal-left {
-      float:left;
-      display:inline;
-      border:1px dotted grey;
-    }
-  }  
 }

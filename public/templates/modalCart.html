@@ -4,8 +4,10 @@
 	<!-- The modal dialog -->
 	<div class='modal-dialog' ng-style='dialogStyle'>
 		<div class='modal-dialog-inner' ng-transclude></div>
-  		<button class="modal-dialog-button" data-ng-click='hideModal()'>Close</button>
-  		&nbsp;&nbsp;
-  		<button class="modal-dialog-button" data-ng-click='clearCart()'>Clear</button>
+		<div class='modal-button-panel'>
+	  		<button class="modal-dialog-button" data-ng-click='hideModal()'>Close</button>
+	  		&nbsp;&nbsp;
+	  		<button class="modal-dialog-button" data-ng-click='clearCart()'>Clear</button>
+  		</div>
 	</div>
 </div>

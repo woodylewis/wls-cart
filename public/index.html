@@ -22,7 +22,7 @@
       <div class="inventory">
         <div class="view-cart">
           <button class="view-button" data-ng-click='toggleCart()'>View Cart</button>
-          <div class="num-items" ng-bind="numItems"></div><div class="num-items-label">items</div>
+          <div class="num-items" data-ng-bind="numItems"></div><div class="num-items-label">items</div>
         </div>
         <div class="item" ng-repeat="chocolate in chocolates.chocolates">
             <div class="type" data-ng-bind="chocolate.type"></div>
@@ -35,19 +35,28 @@
                   total= 'total' clear-items='clearCart()' width='80%' height='80%'>
           Your Cart<div ng-show="(total == 0)" style="display:inline;">&nbsp;Is Empty</div>
           <div ng-show="(milk > 0)" class="modal-dialog-row">
-            Milk<div class="modal-dialog-pull-right" ng-bind='milk'></div>
+            <div class="modal-dialog-pull-left">Milk</div>
+            <div class="modal-dialog-pull-left" data-ng-bind="('$' + (milkPrice | number:2))"></div>
+            <div class="modal-dialog-pull-left" data-ng-bind='milk'></div>
           </div>
           <div ng-show="(dark > 0)" class="modal-dialog-row">
-            Dark <div class="modal-dialog-pull-right" ng-bind='dark'></div>
+            <div class="modal-dialog-pull-left">Dark</div>
+            <div class="modal-dialog-pull-left" data-ng-bind="('$' + (darkPrice | number:2))"></div>
+            <div class="modal-dialog-pull-left" data-ng-bind='dark'></div>
           </div>
           <div ng-show="(white > 0)" class="modal-dialog-row">
-            White <div class="modal-dialog-pull-right" ng-bind='white'></div>
+            <div class="modal-dialog-pull-left">White</div>
+            <div class="modal-dialog-pull-left" data-ng-bind="('$' + (whitePrice | number:2))"></div> 
+            <div class="modal-dialog-pull-left" data-ng-bind='white'></div>
           </div>
           <div ng-show="(sugarfree > 0)" class="modal-dialog-row">
-            Sugar Free<div class="modal-dialog-pull-right" ng-bind='sugarfree'></div>
+            <div class="modal-dialog-pull-left">Sugar Free</div>
+            <div class="modal-dialog-pull-left" data-ng-bind="('$' + (sugarfreePrice | number:2))"></div>
+            <div class="modal-dialog-pull-left" data-ng-bind='sugarfree'></div>
           </div>
           <div ng-show="(total > 0)" class="modal-dialog-row">
-            Total <div class="modal-dialog-pull-right" ng-bind='total'></div>
+            <div class="modal-dialog-pull-left">Total</div> 
+            <div class="modal-dialog-pull-left" data-ng-bind="('$' + (total | number:2))"></div>
           </div>
       </modal-cart>
     </div>

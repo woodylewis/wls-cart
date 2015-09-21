@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="stride-test" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="stride-test" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="stride-test" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="stride-test" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="stride-test" class="no-js"> <!--<![endif]-->
 <html>
   <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
@@ -18,13 +18,13 @@
     <header>
       Sugar Sweet Chocolate Treats
     </header>
-    <div ng-cloak ng-controller='mainCtrl'>
+    <div data-ng-cloak data-ng-controller='mainCtrl'>
       <div class="inventory">
         <div class="view-cart">
           <button class="view-button" data-ng-click='toggleCart()'>View Cart</button>
           <div class="num-items" data-ng-bind="numItems"></div><div class="num-items-label">items</div>
         </div>
-        <div class="item" ng-repeat="chocolate in chocolates.chocolates">
+        <div class="item" data-ng-repeat="chocolate in chocolates.chocolates">
             <div class="type" data-ng-bind="chocolate.type"></div>
             <div class="price" data-ng-bind="('$' + (chocolate.price | number:2))"></div>
             <button data-ng-click="addItem(chocolate.id)" class="add-to-cart">Add to Cart</button>
@@ -33,32 +33,32 @@
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
                   total= 'total' clear-items='clearCart()' width='80%' height='80%'>
-          Your Cart<div ng-show="(total === 0)" style="display:inline;">&nbsp;Is Empty</div>
-          <div ng-show="(milk > 0)" class="modal-dialog-row">
+          Your Cart<div data-ng-show="(total === 0)" style="display:inline;">&nbsp;Is Empty</div>
+          <div data-ng-show="(milk > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Milk</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (milkPrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='milk'></div>
             <button data-ng-click="removeItem(1)" class="modal-dialog-pull-right">Remove</button>
           </div>
-          <div ng-show="(dark > 0)" class="modal-dialog-row">
+          <div data-ng-show="(dark > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Dark</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (darkPrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='dark'></div>
             <button data-ng-click="removeItem(2)" class="modal-dialog-pull-right">Remove</button>
           </div>
-          <div ng-show="(white > 0)" class="modal-dialog-row">
+          <div data-ng-show="(white > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">White</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (whitePrice | number:2))"></div> 
             <div class="modal-dialog-pull-left" data-ng-bind='white'></div>
             <button data-ng-click="removeItem(3)" class="modal-dialog-pull-right">Remove</button>
           </div>
-          <div ng-show="(sugarfree > 0)" class="modal-dialog-row">
+          <div data-ng-show="(sugarfree > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Sugar Free</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (sugarfreePrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='sugarfree'></div>
             <button data-ng-click="removeItem(4)" class="modal-dialog-pull-right">Remove</button>
           </div>
-          <div ng-show="(total > 0)" class="modal-dialog-row">
+          <div data-ng-show="(total > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Total</div> 
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (total | number:2))"></div>
           </div>

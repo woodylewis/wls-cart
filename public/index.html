@@ -33,26 +33,30 @@
       </div>
       <modal-cart show='showCart' milk='milk' dark='dark' white='white' sugarfree='sugarfree' 
                   total= 'total' clear-items='clearCart()' width='80%' height='80%'>
-          Your Cart<div ng-show="(total == 0)" style="display:inline;">&nbsp;Is Empty</div>
+          Your Cart<div ng-show="(total === 0)" style="display:inline;">&nbsp;Is Empty</div>
           <div ng-show="(milk > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Milk</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (milkPrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='milk'></div>
+            <button data-ng-click="removeItem(1)" class="modal-dialog-pull-right">Remove</button>
           </div>
           <div ng-show="(dark > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Dark</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (darkPrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='dark'></div>
+            <button data-ng-click="removeItem(2)" class="modal-dialog-pull-right">Remove</button>
           </div>
           <div ng-show="(white > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">White</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (whitePrice | number:2))"></div> 
             <div class="modal-dialog-pull-left" data-ng-bind='white'></div>
+            <button data-ng-click="removeItem(3)" class="modal-dialog-pull-right">Remove</button>
           </div>
           <div ng-show="(sugarfree > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Sugar Free</div>
             <div class="modal-dialog-pull-left" data-ng-bind="('$' + (sugarfreePrice | number:2))"></div>
             <div class="modal-dialog-pull-left" data-ng-bind='sugarfree'></div>
+            <button data-ng-click="removeItem(4)" class="modal-dialog-pull-right">Remove</button>
           </div>
           <div ng-show="(total > 0)" class="modal-dialog-row">
             <div class="modal-dialog-pull-left">Total</div> 

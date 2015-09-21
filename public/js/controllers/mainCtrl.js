@@ -65,4 +65,31 @@ angular.module('stride-test.mainCtrl', [
 		}
 		$scope.numItems++;
 	};
+
+	$scope.removeItem = function(id) {
+		switch (id) {
+			case 1 :
+				$scope.numItems-= $scope.milk;
+				$scope.total-= ($scope.milk * $scope.milkPrice);
+				$scope.milk=0;
+			break;
+			case 2 :
+				$scope.numItems-= $scope.dark;
+				$scope.total-= ($scope.dark * $scope.darkPrice);
+				$scope.dark=0;
+			break;
+			case 3 :
+				$scope.numItems-= $scope.white;
+				$scope.total-= ($scope.white * $scope.whitePrice);
+				$scope.white=0;
+			break;
+			case 4 :
+				$scope.numItems-= $scope.sugarfree;
+				$scope.total-= ($scope.sugarfree * $scope.sugarfreePrice);
+				$scope.sugarfree=0;
+			break;
+			default:
+				console.log('no id for item');
+		}
+	};
 }]);

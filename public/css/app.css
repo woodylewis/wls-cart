@@ -110,13 +110,16 @@ body {
 }
 .modal .modal-dialog .modal-dialog-row .modal-dialog-pull-left,
 .modal .modal-dialog .modal-dialog-row .modal-dialog-pull-right {
+  position: relative;
+  top: 0;
   width: 4em;
   display: inline;
+  margin-right: 2em;
 }
 .modal .modal-dialog .modal-dialog-row .modal-dialog-pull-left {
   float: left;
-  margin-right: 2em;
 }
 .modal .modal-dialog .modal-dialog-row .modal-dialog-pull-right {
   float: right;
+  margin-bottom: 2em;
 }

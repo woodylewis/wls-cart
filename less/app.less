@@ -1,12 +1,4 @@
-@bp-small-mobile : 375px;
-@bp-larger-than-small-mobile : 400px;
 @black: #000000;
-@secondary-color: lighten(@dark-grey, 13.5%);
-@dark-grey: #333;
-@border-color: #bbb;
-@primary-color: #33c3f0;
-@link-color: #1eaedb;
-@global-radius: 4px;
 
 header {
     width:100%;
@@ -123,15 +115,18 @@ body {
           margin:1em;
           .modal-dialog-pull-left,
           .modal-dialog-pull-right {
+            position:relative;
+            top:0;
             width:4em;
             display:inline;
+            margin-right:2em;
           }
           .modal-dialog-pull-left {
             float:left;
-            margin-right:2em;
           }
           .modal-dialog-pull-right {
             float:right;
+            margin-bottom:2em;
           }
       }
   }
